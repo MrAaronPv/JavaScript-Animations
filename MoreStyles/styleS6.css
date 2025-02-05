@@ -1,0 +1,37 @@
+body {
+    background-color: #F2F6F6 !important;
+}
+
+.div__buttons {
+    background-color: #333;
+}
+
+.container {
+    overflow: hidden;       
+}
+
+h1 {
+    width: 100%;
+    margin-bottom: 0 !important;
+    animation: scaleUpDown 2s infinite;
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.div__img__edit {
+    margin-top: 0;
+}
+
+.div__img__edit img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 40vw;
+}

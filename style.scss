@@ -3,22 +3,7 @@ $c1 : #f3f3f3;
 $c2 : #000;
 $c3 : #333;
 
-$yellow1: rgb(255, 223, 88); 
-$yellow2: rgb(252, 211, 77); 
-$yellow3: rgb(240, 194, 50); 
-
-@mixin link-style {
-    color: $c2;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: all ease-in-out .3s;
-    cursor: crosshair;
-    &:hover {
-        font-size: 16px;
-        border-bottom: 1px solid $c2;
-    }
-}
+@use 'MoreStyles/variable.scss' as vars;
 
 * {
     margin: 0;
@@ -32,8 +17,8 @@ $yellow3: rgb(240, 194, 50);
         left: 0;
         width: 100%;
         height: 100vh;
+        @include vars.background__yellow();
         // background: linear-gradient(90deg, rgb(240, 213, 107), rgb(245, 230, 25));
-        background: linear-gradient(90deg, $yellow1, $yellow2, $yellow3);
         z-index: -1;
     }    
 }
@@ -59,7 +44,7 @@ header {
             }
         }
         .better__a {
-            @include link-style();
+            @include vars.link-style();
         }
         .logo__edit {
             &:hover {
@@ -124,6 +109,19 @@ header {
     background-color: $c3;
     h4 {
         color: $c1;
+    }
+}
+
+.nav__edit__scripts {
+    @include vars.background__yellow();
+    a {
+        @include vars.link-style();
+        color: $c2;
+
+        &:hover {
+            border: none;
+            color: #555;
+        }
     }
 }
 
