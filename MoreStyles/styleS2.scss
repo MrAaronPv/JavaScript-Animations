@@ -1,0 +1,36 @@
+// Variables 
+$c1 : #f3f3f3;
+$c2 : #000;
+$c3 : #333;
+
+$yellow1: rgb(255, 223, 88); 
+$yellow2: rgb(252, 211, 77); 
+$yellow3: rgb(240, 194, 50); 
+
+.card {
+    
+    .card-body {
+        background-color: #333;
+        color: $c1;
+        .span__edit {
+            font-size: 13px;
+        }
+    }
+    .container {
+        height: 30vw;
+        width: 100%; 
+        position: relative; 
+        overflow: hidden;
+      
+        .distortion,
+        .distortion__2,
+        .distortion__3 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    } 
+}

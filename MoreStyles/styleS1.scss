@@ -1,0 +1,71 @@
+// Variables 
+$c1 : #f3f3f3;
+$c2 : #000;
+$c3 : #333;
+
+$yellow1: rgb(255, 223, 88); 
+$yellow2: rgb(252, 211, 77); 
+$yellow3: rgb(240, 194, 50); 
+
+.section__animation {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid $c3;
+    border-bottom: 1px solid $c3;
+    background-color: $c3;
+    ul {
+        width: 100%;
+        height: 8vw;
+        list-style: none;
+        padding-left: 100%;
+        animation: scroll 20s linear infinite;
+        li {
+            margin-left: 30px;
+            color: $yellow2;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 15px;
+            i {
+                color: $yellow2;
+            }
+        }
+        h3 {
+            color: $yellow2;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+    }
+    
+    #ul__3, #ul__4 {
+        padding-right: 100%;
+        animation: reversesc 20s linear infinite;
+    }
+}
+
+#footer {
+    height: 25vh;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes reversesc {
+    from {
+        transform: translateX(-100%); 
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+

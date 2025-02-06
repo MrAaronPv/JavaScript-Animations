@@ -1,0 +1,25 @@
+.card .card-body {
+  background-color: #333;
+  color: #f3f3f3;
+}
+.card .card-body .span__edit {
+  font-size: 13px;
+}
+.card .container {
+  height: 30vw;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card .container .distortion,
+.card .container .distortion__2,
+.card .container .distortion__3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=styleS2.css.map */
