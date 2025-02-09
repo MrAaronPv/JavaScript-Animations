@@ -1,0 +1,47 @@
+// Variables 
+$light-bg: #f9f9f9;
+$light-text: #333;
+$light-border: #e0e0e0;
+
+$dark-bg: #212121;
+$dark-text: #f5f5f5;
+$dark-border: #333333;
+
+@mixin theme($bg, $text, $border) {
+    background-color: $bg;
+    color: $text !important;
+    border-color: $border;
+}
+
+body {
+    // Theme Light
+    @include theme($light-bg, $light-text, $light-border);
+    transition: all ease-in-out .4s;
+
+    // Theme Dark
+    &.dark {
+        @include theme($dark-bg, $dark-text, $dark-border);
+
+
+        .btn__Change {
+            background-color: $dark-bg !important;
+            border-color: #888 !important;
+            color: $dark-text !important;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: #f3f3f3 !important;
+                color: $light-text !important;
+            }
+        }
+
+        .dark-text__edit {
+            color: $dark-text !important;
+        }
+    }
+}
+
+#sectionJS {
+    width: 100%;
+}
+
